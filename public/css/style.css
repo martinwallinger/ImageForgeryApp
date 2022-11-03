@@ -1,0 +1,11 @@
+body{
+    background-color: bisque;
+}
+
+img{
+    width: 400px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }
+
