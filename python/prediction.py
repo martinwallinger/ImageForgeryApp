@@ -6,7 +6,7 @@ from ela import convert_to_ela_image
 def prepare_image(fname):
     image_size = (128, 128)
     return (
-        np.array(convert_to_ela_image(fname[0], 90).resize(image_size)).flatten()
+        np.array(convert_to_ela_image(fname, 90).resize(image_size)).flatten()
         / 255.0
     )  # return ela_image as a numpy array
 
