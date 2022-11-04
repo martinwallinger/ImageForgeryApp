@@ -7,10 +7,12 @@
 </head>
 
 <body>
-
-    <input type='file' id="img" accept="image/*"/>
-    <br><img id="myImg" src="#">
-
+	<form enctype="multipart/form-data" method="post" action="/upload">
+		<input type='file' id="img" name="image" accept="image/*"/>
+		<input type="submit" id="testImage" value="Submit Image">
+	</form>
+	
+	<br><img id="myImg" src="#">
 </body>
 
 </html>
