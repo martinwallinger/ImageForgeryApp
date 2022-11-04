@@ -12,7 +12,7 @@ def prepare_image(fname):
 
 
 def predict_result(fname):
-    model = load_model("trained_model.h5")  # load the trained model
+    model = load_model("./python/trained_model.h5")  # load the trained model
     class_names = ["Forged", "Authentic"]  # classification outputs
     test_image = prepare_image(fname)
     test_image = test_image.reshape(-1, 128, 128, 3)

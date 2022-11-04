@@ -22,11 +22,20 @@ var storage = multer.diskStorage({
 })
 var upload = multer({ storage: storage })
 
-var pyInterface = '/python/interface.py'
-var pyshell = new PythonShell(pyInterface)
-
 app.post('/upload', upload.single('image'), (req, res) => {
-	res.send(file.path)
+	var imagepath = req.file.path
+	
+	let options = {
+		mode: 'text',
+		pythonOptions: ['-u'], // get print results in real-time
+		scriptPath: './python',
+		args: [req.file.path]
+	};
+	
+	PythonShell.run('./interface.py', options, function(err, results){
+		if (err) throw err;
+		console.log('results %j', results)
+	})
 })
 
 var server = app.listen(80, function () {

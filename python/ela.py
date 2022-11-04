@@ -7,7 +7,7 @@ def convert_to_ela_image(path, quality):
     original_image = Image.open(path).convert("RGB")
 
     # resaving input image at the desired quality
-    resaved_file_name = "resaved_image.jpg"  # predefined filename for resaved image
+    resaved_file_name = "./python/resaved_image.jpg"  # predefined filename for resaved image
     original_image.save(resaved_file_name, "JPEG", quality=quality)
     resaved_image = Image.open(resaved_file_name)
 
@@ -24,7 +24,7 @@ def convert_to_ela_image(path, quality):
     # enhancing elaimage to brighten the pixels
     ela_image = ImageEnhance.Brightness(ela_image).enhance(scale)
 
-    ela_image.save("ela_image.png")
+    ela_image.save("./python/ela_image.png")
     return ela_image
 
 
