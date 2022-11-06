@@ -35,6 +35,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 	PythonShell.run('./interface.py', options, function(err, results){
 		if (err) throw err;
 		console.log('results %j', results)
+		res.send(results[2]+'<br><a href="/"> Try again </a>') // send response page
 	})
 })
 
