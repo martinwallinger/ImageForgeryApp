@@ -4,10 +4,10 @@ window.addEventListener('load', function() {
           var img = document.querySelector('img');
           
           img.onload = () => {
-              URL.revokeObjectURL(img.src);  // no longer needed, free memory
+              URL.revokeObjectURL(img.src);  
           }
 
-          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.src = URL.createObjectURL(this.files[0]); 
       }
   });
 });

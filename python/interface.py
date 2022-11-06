@@ -17,7 +17,3 @@ imageELA = convert_to_ela_image(sentImage, 90)
 output = prediction + " %" + confidence
 
 print(output)
-
-# here the python magic takes place
-# ui.py will be deleted in future
-
