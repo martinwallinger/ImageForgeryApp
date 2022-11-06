@@ -2,17 +2,26 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-    <script src="./js/ImageUpload.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+	<script src="./js/jquery-3.6.1.min.js"></script>
+	<script src="./js/ImageUpload.js"></script>
 </head>
 
 <body>
-	<form enctype="multipart/form-data" method="post" action="/upload">
-		<input type='file' id="img" name="image" accept="image/*"/>
-		<input type="submit" id="testImage" value="Submit Image">
+	<!-- Input Form -->
+	<form enctype="multipart/form-data" method="post" id="imageform">
+		<input type='file' id="img" name="image" accept="image/*" />
+		<input type="submit" id="submitImage" value="Submit Image">
 	</form>
-	
-	<br><img id="myImg" src="#">
+	<br>
+
+	<img id="myImg" src="#">
+
+	<!-- Output Area -->
+	<div id="outputArea" style="display: none;">
+		<img id="ELAImage" src="#" /><br />
+		<span id="outputText"></span>
+	</div>
 </body>
 
 </html>

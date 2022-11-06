@@ -12,6 +12,7 @@ app.use('/css', express.static(__dirname + '/public/css'))
 app.use('/js', express.static(__dirname + '/public/js'))
 app.use('/images', express.static(__dirname + '/public/images'))
 
+//Storage for multer to download files
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './uploads')
@@ -22,19 +23,26 @@ var storage = multer.diskStorage({
 })
 var upload = multer({ storage: storage })
 
+//Send when client sends form post
 app.post('/upload', upload.single('image'), (req, res) => {
+	//Download image and get the filename
 	var imagepath = req.file.path
+	var output
 	
 	let options = {
 		mode: 'text',
 		pythonOptions: ['-u'], // get print results in real-time
 		scriptPath: './python',
-		args: [req.file.path]
+		args: [imagepath]
 	};
-	
+
+	//Run interface python script with the image
 	PythonShell.run('./interface.py', options, function(err, results){
-		if (err) throw err;
-		console.log('results %j', results)
+		if (err) { output = err; throw err; }
+		output = results[2]
+		console.log(output)
+		//Send back results to client
+		res.send(output)
 	})
 })
 
