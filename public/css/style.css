@@ -9,3 +9,10 @@ img{
     background-size: cover;
   }
 
+.ELAImage{
+    width: 400px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+

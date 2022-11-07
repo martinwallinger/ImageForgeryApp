@@ -33,6 +33,7 @@ $(document).ready(function () {
             timeout: 30000,
             success: function (data) {
                 var output = data.responseText;
+                $('#imageform').hide();
                 $('#outputArea').show();
                 $('#ELAImage').attr('src', './images/ela_image.png');
                 $('#outputText').html(data);
