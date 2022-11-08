@@ -1,18 +1,50 @@
-body{
+body {
     background-color: bisque;
 }
 
-img{
-    width: 400px;
-    border: 1px solid black;
-    background-position: center;
-    background-size: cover;
-  }
+* {
+    box-sizing: border-box;
+}
 
-.ELAImage{
-    width: 400px;
+
+
+.ELAImage {
+    width: 30vw;
     border: 1px solid black;
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (min-width: 663px) {
+    .half {
+        width: 40vw;
+        float: left;
+    }
+
+    img {
+        width: 30vw;
+        border: 1px solid black;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .lds-spinner {
+        position: absolute;
+        left: 45vw;
+        top: 18vw;
+    }
+}
+
+@media screen and (max-width: 663px) {
+    .half {
+        width: 90vw;
+    }
+
+    img {
+        width: 80vw;
+        margin: auto;
+        border: 1px solid black;
+        background-position: center;
+        background-size: cover;
+    }
+}

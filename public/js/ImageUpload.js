@@ -1,8 +1,12 @@
 window.addEventListener('load', function() {
+    $('#myImg').hide()
+    $('#myImgCaption').hide()
+    $('.lds-spinner').hide()
   document.getElementById('img').addEventListener('change', function() {
       if (this.files && this.files[0]) {
           var img = document.querySelector('img');
-          
+          $('#myImg').show()
+          $('#myImgCaption').show()
           img.onload = () => {
               URL.revokeObjectURL(img.src);  
           }
@@ -17,6 +21,7 @@ $(document).ready(function () {
     $("#outputArea").hide();
     $('#submitImage').click(function (event) {
         event.preventDefault();
+        $('.lds-spinner').show()
 
         var formData = new FormData($('#imageform')[0]);
 
@@ -35,6 +40,7 @@ $(document).ready(function () {
                 var output = data.responseText;
                 $('#imageform').hide();
                 $('#outputArea').show();
+                $('.lds-spinner').hide()
                 $('#ELAImage').attr('src', './images/ela_image.png');
                 $('#outputText').html(data);
                 console.log("SUCCESS : ", data);
