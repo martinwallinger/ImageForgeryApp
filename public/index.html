@@ -10,44 +10,51 @@
 </head>
 
 <body>
-	<h1>Image Manipulation Checker</h1>
-	<br>
-
-	<!-- Input Form -->
-	<form enctype="multipart/form-data" method="post" id="imageform">
-		<input type='file' id="img" name="image" accept="image/*" />
-		<input type="submit" id="submitImage" value="Check Image">
-	</form>
-	<br>
-	<div class="half">
-		<p id="myImgCaption">Submitted Image</p>
-		<img id="myImg" src="#">
+	<div class="center"> 
+		<header style="vertical-align: middle; margin: 0;">
+			<!-- <img src="images/trex.ico" width="50" height="50">  -->
+			<h1>Image Analyzer</h1>
+			<button id="darkmode" type="button" class="btn btn-sm btn-dark rounded-pill" onClick="toggleDarkMode();">Dark Mode</button>
+		</header>
+  
 	</div>
-	<div class="half">
-		<div class="lds-spinner">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<!-- Output Area -->
-		<div id="outputArea" style="display: none;">
-			<p>Error Level Analysis</p>
-			<img id="ELAImage" src="#" /><br>
-			<span id="outputText"></span><br>
-			<a href="/">Try again</a>
+	<div class="center" style="margin: 2%;">
+		<!-- Input Form -->
+		<form enctype="multipart/form-data" method="post" id="imageform">
+			<input type='file' id="img" name="image" accept="image/*">
+			<input type="submit" id="submitImage" value="Analyze Image">
+		</form>
+
+		<div class="center" style="margin-left:5%">
+			<div class="half">
+				<p id="myImgCaption">Submitted Image</p>
+				<img id="myImg" src="#">
+			</div>
+			<div class="half">
+				<div class="lds-spinner">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<!-- Output Area -->
+				<div class="half" id="outputArea" >
+					<p>Error Level Analysis</p>
+					<img id="ELAImage" src="#"><br>
+					<span id="outputText"></span><br>
+					<a href="/">Try again</a>
+				</div>
+			</div>
 		</div>
 	</div>
-
-
 
 </body>
 

@@ -16,6 +16,10 @@ window.addEventListener('load', function() {
   });
 });
 
+function toggleDarkMode() {
+	document.body.classList.toggle("dark-mode");
+}
+
 //Ajax Submit Form, just to stay on the same page
 $(document).ready(function () {
     $("#outputArea").hide();
@@ -42,7 +46,7 @@ $(document).ready(function () {
                 $('#outputArea').show();
                 $('.lds-spinner').hide()
                 $('#ELAImage').attr('src', './images/ela_image.png');
-                $('#outputText').html(data);
+                $('#outputText').text(data);
                 console.log("SUCCESS : ", data);
             },
             error: function (data) {

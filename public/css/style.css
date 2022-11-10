@@ -1,19 +1,54 @@
 body {
-    background-color: bisque;
+    background-color: beige;
 }
 
 * {
     box-sizing: border-box;
 }
 
+.center{
+    text-align: center;
+}
 
+.dark-mode {
+    background-color: #272727;
+    color: white;
+}
+
+.button {
+	width: auto;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+.button:hover {
+	background-color: #FEFEFE;
+	color: #C4C4C4;
+	cursor: pointer;
+}
 
 .ELAImage {
     width: 30vw;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-position: center;
     background-size: cover;
 }
+
+
 
 @media screen and (min-width: 663px) {
     .half {
