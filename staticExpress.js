@@ -39,7 +39,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 	//Run interface python script with the image
 	PythonShell.run('./interface.py', options, function(err, results){
 		if (err) { output = err; throw err; }
-		output = results[2]
+		output = results[1]
 		console.log(output)
 		//Send back results to client
 		res.send(output)
