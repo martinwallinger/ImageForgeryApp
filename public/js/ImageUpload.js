@@ -46,7 +46,7 @@ $(document).ready(function () {
                 $('#outputArea').show();
                 $('.lds-spinner').hide()
                 $('#ELAImage').attr('src', './images/ela_image.png');
-                $('#outputText').text(data);
+                $('#outputText').text('Model Prediction: ' + data);
                 console.log("SUCCESS : ", data);
             },
             error: function (data) {
