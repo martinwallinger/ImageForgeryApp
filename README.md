@@ -14,27 +14,27 @@ if the output text for the prediction is weird, try changing the element number 
 credits for image forgery algorithm: 0xsp/image-forgery-detection 
 
 
-Alternatively, put these list of commands into the User Data section of the advanced settings when creating the instance.
-#install python3
+Alternatively, put these list of commands into the User Data section of the advanced settings when creating the instance. <br />
+#install python3<br />
 
-sudo yum update -y
-sudo yum install python3
+sudo yum update -y <br />
+sudo yum install python3 <br />
 
-#install node
+#install node<br />
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-. ~/.nvm/nvm.sh
-nvm install 16.0.0
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash <br />
+. ~/.nvm/nvm.sh <br />
+nvm install 16.0.0 <br />
 
-#install git
+#install git <br />
 
-sudo yum install git -y
+sudo yum install git -y <br />
 
-#clone repository
+#clone repository <br />
 
-git clone https://github.com/martinwallinger/ImageForgeryApp.git
+git clone https://github.com/martinwallinger/ImageForgeryApp.git <br />
 
-#install python3 dependencies
+#install python3 dependencies <br />
 
-python3 -m pip install keras matplotlib numpy pillow pyqt5 seaborn sklearn tqdm
-python3 -m pip install tensorflow --no-cache-dir
+python3 -m pip install keras matplotlib numpy pillow pyqt5 seaborn sklearn tqdm <br />
+python3 -m pip install tensorflow --no-cache-dir <br />
