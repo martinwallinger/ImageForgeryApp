@@ -14,7 +14,7 @@ if the output text for the prediction is weird, try changing the element number 
 credits for image forgery algorithm: 0xsp/image-forgery-detection 
 
 
-Alternatively, put these list of commands into the User Data section of the advanced settings when creating the instance. <br />
+[Alternatively, put these list of commands into the User Data section of the advanced settings when creating the instance.]
 #install python3<br />
 
 sudo yum update -y <br />
